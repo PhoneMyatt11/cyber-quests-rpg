@@ -7,8 +7,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const startGame = () => {
-    console.log("Starting game...");
-    navigate("/game");
+    window.location.href = "/src/pages/game_file/index3.html";
   };
 
   return (
@@ -48,6 +47,8 @@ const Index = () => {
           >
             Start Game
           </button>
+
+          
         </div>
       </div>
     </div>
