@@ -8,7 +8,6 @@ const Index = () => {
 
   const startGame = () => {
     console.log("Starting game...");
-    // Navigate to game screen (to be implemented)
     navigate("/game");
   };
 
@@ -37,13 +36,9 @@ const Index = () => {
           </h1>
 
           {/* Subtitle/Motto */}
-          <div className="pixel-border glass-panel p-6 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <p className="text-sm md:text-base lg:text-lg text-foreground leading-relaxed">
-              Embark on an epic journey through a world where magic meets technology.
-              <br />
-              Solve puzzles, defeat cyber threats, and save the realm!
-            </p>
-          </div>
+          <p className="text-xs md:text-sm lg:text-base text-foreground leading-snug animate-fade-in" style={{ animationDelay: "0.2s", maxWidth: 480, margin: "0 auto", marginBottom: "1.75rem" }}>
+            Discover cybersecurity through an epic fantasy adventure. Learn to spot threats, make smart choices, and protect the realm.
+          </p>
 
           {/* Start Game Button */}
           <button
@@ -53,13 +48,6 @@ const Index = () => {
           >
             Start Game
           </button>
-
-          {/* Decorative elements */}
-          <div className="mt-8 flex justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            <span className="text-2xl">⚔️</span>
-            <span className="text-2xl">🛡️</span>
-            <span className="text-2xl">🔮</span>
-          </div>
         </div>
       </div>
     </div>

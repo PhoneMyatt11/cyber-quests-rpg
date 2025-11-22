@@ -100,6 +100,44 @@ All colors MUST be HSL.
   }
 }
 
+/* Theme variables for pixel-art dark/light mode */
+:root[data-theme="light"] {
+  --bg-color: #f5f5f5;
+  --text-color: #222;
+  --panel-color: #fff;
+  --pixel-border: #000;
+  --primary: #3a7;
+  --primary-foreground: #fff;
+}
+:root[data-theme="dark"] {
+  --bg-color: #181818;
+  --text-color: #e7e7e7;
+  --panel-color: #222;
+  --pixel-border: #fff;
+  --primary: #3a7;
+  --primary-foreground: #fff;
+}
+body, html {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.pixel-modal, .pixel-box, .pixel-border, .glass-panel, .pixel-menu-dropdown, .pixel-hamburger-menu, .pixel-chatbox-modal, .info-modal {
+  background: var(--panel-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--pixel-border) !important;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.pixel-menu-item, .pixel-send, .pixel-close, .pixel-chat-input {
+  background: var(--panel-color);
+  color: var(--text-color);
+  border-color: var(--pixel-border);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.pixel-menu-item:hover, .pixel-send:hover {
+  filter: brightness(1.1);
+}
+
 @layer base {
   * {
     @apply border-border;
