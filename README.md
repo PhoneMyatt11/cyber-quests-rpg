@@ -1,73 +1,148 @@
-# Welcome to your Lovable project
+🎮 CyberQuest — Pixel Fantasy Cybersecurity RPG
 
-## Project info
+CyberQuest is an interactive pixel-art visual novel adventure that teaches cybersecurity concepts through storytelling, branching choices, and an immersive fantasy world where magic meets technology.
 
-**URL**: https://lovable.dev/projects/fb606f9b-fe7a-4034-8b0f-97e2ba5e1611
+This project was created as part of DAHacks 4.0 (De Anza College Hackathon) under the theme:
+Cybersecurity • Social Impact • Entertainment
 
-## How can I edit this code?
+🌟 Features
+🏰 Pixel-Art Fantasy UI
 
-There are several ways of editing your application.
+A handcrafted medieval UI style with retro CRT-style pixel fonts, animated components, and responsive layout.
 
-**Use Lovable**
+🧭 Landing Page
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fb606f9b-fe7a-4034-8b0f-97e2ba5e1611) and start prompting.
+A fully designed landing page featuring:
 
-Changes made via Lovable will be committed automatically to this repo.
+Background pixel art
 
-**Use your preferred IDE**
+Retro title & subtitle
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Start Game button
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Hamburger menu with:
 
-Follow these steps:
+Main Page
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+AI Chat (popup)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Info Modal
 
-# Step 3: Install the necessary dependencies.
-npm i
+(Optional future features)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+🤖 AI Assistant
+
+Built-in AI chat (OpenAI API) that:
+
+Pops up in a modal window
+
+Dims the background
+
+Allows Q&A or explanations
+
+Uses pixel UI styling
+
+🎮 Game Integration
+
+Pressing Start Game redirects to an external game package provided by teammates:
+
+/public/game_file/index3.html
+
+
+This allows modular development where different team members build their own game scenes in standalone HTML/JS.
+
+🗂 Clean Project Structure
+cyber-quests-rpg/
+│
+├── public/
+│   └── game_file/      ← teammate game folder (index3.html, assets, etc.)
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │     ├── HamburgerMenu.jsx
+│   │     ├── AIChatBox.jsx
+│   │     └── InfoModal.jsx
+│   ├── pages/
+│   │     ├── Index.tsx  ← Landing page
+│   │     └── GamePage.jsx (fallback placeholder)
+│
+└── README.md
+
+🚀 How to Run the Project
+1️⃣ Install dependencies
+npm install
+
+2️⃣ Start development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Vite will launch the site at:
 
-**Use GitHub Codespaces**
+👉 http://localhost:5173
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+(your port may vary)
 
-## What technologies are used for this project?
+📁 Adding Teammate Game Files
 
-This project is built with:
+Each teammate can provide a fully-self-contained HTML game folder.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Place their folder here:
 
-## How can I deploy this project?
+public/game_file/
 
-Simply open [Lovable](https://lovable.dev/projects/fb606f9b-fe7a-4034-8b0f-97e2ba5e1611) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+Make sure there is an entry file:
 
-Yes, you can!
+public/game_file/index3.html
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The Start Game button will automatically redirect:
+
+window.location.href = "/game_file/index3.html";
+
+🤝 Developers
+
+CyberQuest was built by:
+
+Tedoo
+
+Derek
+
+Swum
+
+Kelvin
+
+Clyde
+
+🛠 Tech Stack
+
+React + Vite
+
+TypeScript
+
+TailwindCSS / Custom Pixel Styling
+
+OpenAI API Integration
+
+HTML Canvas / Pixel Art UI
+
+🔮 Future Expansion
+
+Multi-chapter story system
+
+Interactive cybersecurity puzzles
+
+Inventory UI
+
+Save/load system
+
+More mini-games
+
+Character dialogue sprites
+
+Boss fight logic
+
+📜 License
+
+MIT License. Free to modify and expand during/after DAHacks.
